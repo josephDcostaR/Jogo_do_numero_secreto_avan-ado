@@ -17,6 +17,8 @@ function exibirMensagemInicial() {
 }
 
 exibirMensagemInicial();
+document.querySelectorAll('.container__botao__dificuldade').forEach(botao => botao.removeAttribute('disabled'));
+
 
 function verificarChute() {
     let chute = document.querySelector('input').value;
@@ -25,7 +27,7 @@ function verificarChute() {
     if (chute == numeroSecreto) {
         exibirTextoNaTela('h1', 'Acertou!');
         let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa';
-        let mensagemTentativas = `Você descobriu o número secreto com ${tentativas} ${palavraTentativa}!`;
+        let mensagemTentativas = `Você descobriu o número secreto com ${tentativas} ${palavraTentativa}, caso queira continuar clique em Novo Jogo!`;
         exibirTextoNaTela('p', mensagemTentativas);
         document.getElementById('reiniciar').removeAttribute('disabled');
     } else {
@@ -41,6 +43,7 @@ function verificarChute() {
 
 function niveisDeDificuldade(event) {
     let valor = event.target.dataset.value;
+
     switch (valor) {
         case 'facil':
             dificuldade = 10;
@@ -61,10 +64,15 @@ function niveisDeDificuldade(event) {
     numeroSecreto = gerarNumeroAleatorio(); // Gera o número secreto após definir a dificuldade
     tentativas = 1; // Reseta as tentativas
     console.log(numeroSecreto);
+
+    desabilitarOutrosBotoes(event.target);
+
 }
 
+//Captura o butão pelo class
 let botoes = document.querySelectorAll('.container__botao__dificuldade');
 
+//Verifica todos os botões com a mesma class
 botoes.forEach(function(botao) {
     botao.addEventListener('click', niveisDeDificuldade);
 });
@@ -101,10 +109,17 @@ function reiniciarJogo() {
     limparCampo();
     tentativas = 1;
     exibirMensagemInicial();
-    document.getElementById('reiniciar').setAttribute('disabled', true)
+    document.getElementById('reiniciar').setAttribute('disabled', true);
+    document.querySelectorAll('.container__botao__dificuldade').forEach(botao => botao.removeAttribute('disabled'));
 }
 
-
+function desabilitarOutrosBotoes(botaoClicado) {
+    document.querySelectorAll('.container__botao__dificuldade').forEach(botao => {
+        if (botao !== botaoClicado) {
+            botao.setAttribute('disabled', true);
+        }
+    });
+}
 
 
 
