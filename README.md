@@ -9,7 +9,7 @@ O desafio é simples: tente adivinhar qual número o nosso site está pensando. 
   
 Dê o seu melhor palpite e veja se consegue acertar!
 
-Clique aqui para acessar o site e divirta-se!
+[Clique aqui para acessar o site](https://numero-secreto-turbo.vercel.app/ "Title")  e divirta-se!.
 
 ## Tecnologias usadas
 
