@@ -1,9 +1,12 @@
-**Site Numero Secreto Turbo**
+# Site Numero Secreto Turbo
+Bem-vindo ao Site Numero Secreto Turbo!
 
-*Tente adivinhar qual o numero que nosso site esta pensando.*
+O desafio é simples: tente adivinhar qual número o nosso site está pensando. Agora com novos níveis de dificuldade para testar suas habilidades:
 
-*Agora com novos níveis de dificuldade: Facil 0 - 10, Medio 0 - 100, Dificil 0 - 1000.*
+- Fácil: Números de 0 a 10
+- Médio: Números de 0 a 100
+- Difícil: Números de 0 a 1000
+  
+Dê o seu melhor palpite e veja se consegue acertar!
 
-*tente seu melhor chute e veja o resultado.*
-
-*link: https://numero-secreto-turbo.vercel.app/*
+Link para acessar o site: Numero Secreto Turbo
