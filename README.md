@@ -9,4 +9,6 @@ O desafio é simples: tente adivinhar qual número o nosso site está pensando. 
   
 Dê o seu melhor palpite e veja se consegue acertar!
 
-Link para acessar o site: Numero Secreto Turbo
+Link para acessar o site: numero-secreto-turbo.vercel.app
+
+## Tecnologias usadas
